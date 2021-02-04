@@ -22,7 +22,15 @@ namespace Agricola
     {
         public MainWindow()
         {
+
+            // TODO - start app maximized pour cuteness overload
+            InitBoard();
             InitializeComponent();
+        }
+
+        private void InitBoard()
+        {
+            
         }
     }
 }

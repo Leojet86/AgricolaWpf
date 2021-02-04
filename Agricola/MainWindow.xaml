@@ -5,8 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agricola"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Agricola WPF" Height="1040" Width="1920">
+    <Grid x:Name="GameGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "auto
+                           " />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="GameActionGrid" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <!--Star (*) − It will take the remaining space when Auto and fixed sized are filled.-->
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "201" />
+                <RowDefinition Height = "201" />
+                <RowDefinition Height = "201" />
+            </Grid.RowDefinitions>
+            
+            <!--Default Action Buttons-->
+            <Button x:Name="defaultAction1" Content="Stage 1 Action" Grid.Column="2" Grid.Row="0"/>
+            <StackPanel  Grid.Column="2" Grid.Row="1">
+                <Button x:Name="defaultAction2"></Button>
+                <Button x:Name="defaultAction3"></Button>
+            </StackPanel>
+            <StackPanel  Grid.Column="3" Grid.Row="1">
+                <Button x:Name="defaultAction4"></Button>
+                <Button x:Name="defaultAction5"></Button>
+            </StackPanel>
+            <StackPanel  Grid.Column="2" Grid.Row="2">
+                <Button x:Name="defaultAction6"></Button>
+                <Button x:Name="defaultAction7"></Button>
+            </StackPanel>
+            <StackPanel  Grid.Column="3" Grid.Row="2">
+                <Button x:Name="defaultAction8"></Button>
+                <Button x:Name="defaultAction9"></Button>
+            </StackPanel>
+
+
+            <!--Stage 1 Button-->
+            <Button x:Name="buttonStage1Action1" Content="Stage 1 Action" Grid.Column="3" Grid.Row="0"/>
+            <Button x:Name="buttonStage1Action2" Content="Stage 1 Action" Grid.Column="4" Grid.Row="0"/>
+            <Button x:Name="buttonStage1Action3" Content="Stage 1 Action" Grid.Column="4" Grid.Row="1"/>
+            <Button x:Name="buttonStage1Action4" Content="Stage 1 Action" Grid.Column="4" Grid.Row="2"/>
+
+            <!--Stage 2 Button-->
+            <Button x:Name="buttonStage2Action1" Content="Stage 2 Action" Grid.Column="5" Grid.Row="0"/>
+            <Button x:Name="buttonStage2Action2" Content="Stage 2 Action" Grid.Column="5" Grid.Row="1"/>
+            <Button x:Name="buttonStage2Action3" Content="Stage 2 Action" Grid.Column="5" Grid.Row="2"/>
+
+            <!--Stage 3 Button-->
+            <Button x:Name="buttonStage3Action1" Content="Stage 3 Action" Grid.Column="6" Grid.Row="0"/>
+            <Button x:Name="buttonStage3Action2" Content="Stage 3 Action" Grid.Column="6" Grid.Row="1"/>
+
+            <!--Stage 4 Button-->
+            <Button x:Name="buttonStage4Action1" Content="Stage 4 Action" Grid.Column="7" Grid.Row="0"/>
+            <Button x:Name="buttonStage4Action2" Content="Stage 4 Action" Grid.Column="7" Grid.Row="1"/>
+
+            <!--Stage 5 Button-->
+            <Button x:Name="buttonStage5Action1" Content="Stage 5 Action" Grid.Column="8" Grid.Row="0"/>
+            <Button x:Name="buttonStage5Action2" Content="Stage 5 Action" Grid.Column="8" Grid.Row="1"/>
+
+            <!--Stage 6 Button-->
+            <Button x:Name="buttonStage6Action1" Content="Stage 6 Action" Grid.Column="9" Grid.Row="0"/>
+
+
+        </Grid>
+
+        <Grid x:Name="CurrentPlayerGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <!--Star (*) − It will take the remaining space when Auto and fixed sized are filled.-->
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+                <ColumnDefinition Width = "191" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "402" />
+            </Grid.RowDefinitions>
+            
+            
+        </Grid>
         
     </Grid>
 </Window>
