@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Agricola.Dialog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace Agricola
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int _numberOfPlayers;
+
         public MainWindow()
         {
 
@@ -31,6 +34,17 @@ namespace Agricola
         private void InitBoard()
         {
             
+        }
+
+        private void startNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO - open new game dialog return number of players
+            NewGameDialog newGameDialog = new NewGameDialog();
+            if (newGameDialog.ShowDialog() == true)
+            {
+                Console.WriteLine("===== NEW GAME YESSSSS =====");
+                Console.WriteLine("===== Number of players : {0}", newGameDialog.NumberOfPlayers());
+            }
         }
     }
 }

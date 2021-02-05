@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Agricola"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
         Title="Agricola WPF" Height="1040" Width="1920">
+    
     <Grid x:Name="GameGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height = "*" />
@@ -35,23 +37,39 @@
             </Grid.RowDefinitions>
             
             <!--Default Action Buttons-->
-            <Button x:Name="defaultAction1" Content="Stage 1 Action" Grid.Column="2" Grid.Row="0"/>
-            <StackPanel  Grid.Column="2" Grid.Row="1">
-                <Button x:Name="defaultAction2"></Button>
-                <Button x:Name="defaultAction3"></Button>
-            </StackPanel>
-            <StackPanel  Grid.Column="3" Grid.Row="1">
-                <Button x:Name="defaultAction4"></Button>
-                <Button x:Name="defaultAction5"></Button>
-            </StackPanel>
-            <StackPanel  Grid.Column="2" Grid.Row="2">
-                <Button x:Name="defaultAction6"></Button>
-                <Button x:Name="defaultAction7"></Button>
-            </StackPanel>
-            <StackPanel  Grid.Column="3" Grid.Row="2">
-                <Button x:Name="defaultAction8"></Button>
-                <Button x:Name="defaultAction9"></Button>
-            </StackPanel>
+            <Button x:Name="defaultAction1" Content="Default Action 1" Grid.Column="2" Grid.Row="0"/>
+            <Grid  Grid.Column="2" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="defaultAction2" Content="Default Action 2" Grid.Row="0"></Button>
+                <Button x:Name="defaultAction3" Content="Default Action 3" Grid.Row="1"></Button>
+            </Grid>
+            <Grid  Grid.Column="3" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="defaultAction4" Content="Default Action 4" Grid.Row="0"></Button>
+                <Button x:Name="defaultAction5" Content="Default Action 5" Grid.Row="1"></Button>
+            </Grid>
+            <Grid  Grid.Column="2" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="defaultAction6" Content="Default Action 6" Grid.Row="0"></Button>
+                <Button x:Name="defaultAction7" Content="Default Action 7" Grid.Row="1"></Button>
+            </Grid>
+            <Grid  Grid.Column="3" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="defaultAction8" Content="Default Action 8" Grid.Row="0"></Button>
+                <Button x:Name="defaultAction9" Content="Default Action 9" Grid.Row="1"></Button>
+            </Grid>
 
 
             <!--Stage 1 Button-->
@@ -99,6 +117,27 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height = "402" />
             </Grid.RowDefinitions>
+
+            <Grid x:Name="CurrentPlayerFarmGrid" Grid.Column="0">
+                <!--TODO set the grid to be the same as the Plot[][] array --> 
+            </Grid>
+
+            <StackPanel x:Name="CurrentPlayerResourcePanel" Grid.Column="1">
+                <!--TODO add text Blocks to display current player resources-->
+            </StackPanel>
+
+            <Grid x:Name="MenuPanel" Grid.Column="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="ShopButton" Content="Major imp. shop" Grid.Row="0"></Button>
+                <Button Grid.Row="1"></Button>
+                <Button Grid.Row="2" x:Name="endTurnButton" Content="End turn"></Button>
+                <Button x:Name="startNewGame" Grid.Row="3" Content="New Game" Click="startNewGame_Click"></Button>
+            </Grid>
             
             
         </Grid>

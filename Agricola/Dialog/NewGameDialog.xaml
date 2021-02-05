@@ -1,0 +1,33 @@
+﻿<Window x:Class="Agricola.Dialog.NewGameDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Agricola.Dialog"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Start new game" Height="130.167" Width="227.097" ResizeMode="NoResize">
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "auto" />
+            <ColumnDefinition Width = "auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "auto" />
+            <RowDefinition Height = "auto" />
+        </Grid.RowDefinitions>
+
+
+        <Label Content="Players :" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <xctk:IntegerUpDown x:Name="playerNumberPicker" Grid.Row="0" Grid.Column="1" Maximum="4" Minimum="2" Value="2"/>
+
+
+        <WrapPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button IsDefault="True" x:Name="StartGameButton" Content="Start" Grid.Row="1" Grid.Column="0" Click="ButtonStart_Click" MinWidth="60" Margin="0,0,10,0"/>
+            <Button IsCancel="True" x:Name="CancelNewGameButton" Content="Cancel" Grid.Row="1" Grid.Column="1" MinWidth="60"/>
+        </WrapPanel>
+    </Grid>
+</Window>
